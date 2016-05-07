@@ -1,0 +1,25 @@
+{
+  "name": "beautiful yapo cl",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Chrome extension to make yapo.cl Beautiful through css inyection",
+  "homepage_url": "http://fforr.es/",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "http://*.yapo.cl/",
+      "http://yapo.cl/"
+    ],
+    "css": ["home/content.css"],
+    "js": ["home/content.js"]
+  },{
+    "matches": [
+      "http://*.yapo.cl/*",
+      "http://yapo.cl/*"
+    ],
+    "css": ["page/content.css"],
+    "js": ["page/content.js"]
+  }]
+}
