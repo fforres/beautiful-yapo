@@ -1,6 +1,37 @@
-body {
+body #site-wrapper {
+  margin-left: 0;
+}
+
+body > #site-wrapper > #content {
+  display: none;
+}
+
+#content > #adserver-right {
+  display: none;
+}
+
+body #site-wrapper #newContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+body #site-wrapper #newContent #adserver-right{
+  position: static;
+}
+
+.box.da-wrapper .gallery #extra_imagesB {
+  width: 100%;
+}
+
+.box.da-wrapper .gallery .main-picb {
+  width: 100%;
+}
+
+.box.da-wrapper .gallery #display_image {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 100%;
 }

@@ -1,15 +1,18 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+body .panel.header{
+  height: auto;
+  margin: 0;
 }
+body .panel.header .logo{
+  margin-left: 0px;
+  width: auto;
+}
+
 
 /*
 *  Fixing main structure
 */
 body #container_main {
-  display: flex !important;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
@@ -18,22 +21,14 @@ body #container_main {
   margin: auto;
 }
 
-#container_main #search {
+body #container_main #search {
   order: 0;
-  margin-top: 0 !important;
-  margin-left: 5px !important;
-  margin-right: 5px !important;
-  padding: 0px !important;
-
-}
-
-#container_main #listing_container {
-  order: 1;
+  margin: 0;
+  padding: 0px;
 }
 
 #container_main #adserver-sidebar {
   order: 2;
-  padding-left: 20px;
 }
 
 #container_main #adserver-listing-right {
@@ -50,16 +45,24 @@ body #container_main {
   left: auto !important;
 }
 
-#newTopPublicity #adserver-top {
-  display: block !important;
-  top: 0 !important;
-  left: auto !important;
+#listing_container #newTopPublicity {
+  height: 90px;
+}
+
+#listing_container #newTopPublicity #adserver-top {
+  display: block;
+  top: 0;
+  left: auto;
 }
 
 #adserver-top {
   display:none;
 }
 
+#search_form #searchmain {
+  padding: 11px ;
+  margin: 0px;
+}
 /*
 *  Fixing middle column
 */
@@ -69,6 +72,26 @@ body #container_main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  order: 1;
+  width: 728px;
+  margin-right: 15px !important;
+  margin-left: 15px !important;
+}
+
+#container_main #listing_container,
+#container_main #listing_container > tbody,
+#container_main #listing_container > tbody > tr,
+#container_main #listing_container > tbody > tr > #listing-top {
+  width: 728px;
+} {
+  width: 728px;
+}
+
+
+#container_main #listing_container #listing-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #container_main #listing_container #listing-top .gallery-wrap {

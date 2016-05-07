@@ -9,29 +9,29 @@
   ],
   "content_scripts": [{
     "matches": [
-      "http://*.yapo.cl/",
-      "http://yapo.cl/"
+      "*://*.yapo.cl/*",
+      "*://yapo.cl/*"
     ],
-    "css": ["home/content.css"],
-    "js": ["home/content.js"]
-  },{
+    "css": ["global/content.css", "home/content.css"],
+    "js": ["global/content.js", "home/content.js"]
+  }, {
     "matches": [
 
-      "http://yapo.cl/region_metropolitana",
-      "http://yapo.cl/arica_parinacota",
-      "http://yapo.cl/tarapaca",
-      "http://yapo.cl/antofagasta",
-      "http://yapo.cl/atacama",
-      "http://yapo.cl/coquimbo",
-      "http://yapo.cl/valparaiso",
-      "http://yapo.cl/ohiggins",
-      "http://yapo.cl/maule",
-      "http://yapo.cl/biobio",
-      "http://yapo.cl/araucania",
-      "http://yapo.cl/los_rios",
-      "http://yapo.cl/los_lagos",
-      "http://yapo.cl/aisen",
-      "http://yapo.cl/magallanes_antartica",
+      "http://*.yapo.cl/region_metropolitana?*",
+      "http://*.yapo.cl/arica_parinacota?*",
+      "http://*.yapo.cl/tarapaca?*",
+      "http://*.yapo.cl/antofagasta?*",
+      "http://*.yapo.cl/atacama?*",
+      "http://*.yapo.cl/coquimbo?*",
+      "http://*.yapo.cl/valparaiso?*",
+      "http://*.yapo.cl/ohiggins?*",
+      "http://*.yapo.cl/maule?*",
+      "http://*.yapo.cl/biobio?*",
+      "http://*.yapo.cl/araucania?*",
+      "http://*.yapo.cl/los_rios?*",
+      "http://*.yapo.cl/los_lagos?*",
+      "http://*.yapo.cl/aisen?*",
+      "http://*.yapo.cl/magallanes_antartica?*",
 
       "http://*.yapo.cl/region_metropolitana",
       "http://*.yapo.cl/arica_parinacota",
@@ -48,7 +48,6 @@
       "http://*.yapo.cl/los_lagos",
       "http://*.yapo.cl/aisen",
       "http://*.yapo.cl/magallanes_antartica"
-
     ],
     "css": ["page/content.css"],
     "js": ["page/content.js"]
@@ -59,5 +58,19 @@
     ],
     "css": ["item/content.css"],
     "js": ["item/content.js"]
+  }, {
+    "matches": [
+      "http://*.yapo.cl/mis_avisos*",
+      "http://yapo.cl/mis_avisos*"
+    ],
+    "css": ["misAvisos/content.css"],
+    "js": ["misAvisos/content.js"]
+  }, {
+    "matches": [
+      "http://*.yapo.cl/tiendas",
+      "http://yapo.cl/tiendas"
+    ],
+    "css": ["tiendas/content.css"],
+    "js": ["tiendas/content.js"]
   }]
 }
